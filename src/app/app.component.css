@@ -1,0 +1,8 @@
+#my_demo {
+  display: block;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px #333 dotted;
+  width: 100%;
+  min-height: 400px;
+}

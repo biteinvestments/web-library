@@ -1,0 +1,11 @@
+{
+  "main": "../bundles/bite-ui-alert.umd.js",
+  "module": "../fesm2015/bite-ui-alert.js",
+  "es2015": "../fesm2015/bite-ui-alert.js",
+  "esm2015": "../esm2015/alert/bite-ui-alert.js",
+  "fesm2015": "../fesm2015/bite-ui-alert.js",
+  "typings": "bite-ui-alert.d.ts",
+  "metadata": "bite-ui-alert.metadata.json",
+  "sideEffects": false,
+  "name": "bite-ui/alert"
+}
