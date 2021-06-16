@@ -1,0 +1,234 @@
+@import './variables.scss';
+
+
+.form-field-label-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+mat-label {
+  margin-bottom: 10px;
+  color: $bi-accent-color;
+  font-size: 14px;
+}
+body .mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+  transform: translateY(0);
+}
+.mat-button-base {
+  border-width: 2px !important;
+  &.mat-flat-button.mat-button-disabled {
+    cursor: not-allowed;
+  }
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  background: #F8F9F9;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0.5em 0;
+}
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0 0;
+}
+.mat-form-field-infix {
+  border-top: 0.34em solid transparent;
+}
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  color: white;
+}
+
+.mat-flat-button.bi-border-button.mat-primary:not(.mat-button-disabled) {
+  // border: 1px solid $bi-primary-color;
+  border-style: solid;
+  border-color: $bi-primary-color;
+}
+
+
+.mat-stroked-button.mat-primary:not(.mat-button-disabled) {
+
+  border-style: solid;
+  border-color: $bi-primary-color;
+  line-height: 32px;
+  span {
+    color: $bi-primary-color;
+  }
+  &:hover {
+    background: $primary-color-02;
+  }
+}
+// 如果在火狐上面有时间选择样式为题就在 mat-form-field 加入这个class
+.mat-form-field-date-range-wrapper {
+  .mat-date-range-wrapper-placeholder {
+    input::-webkit-input-placeholder {
+      color: #8e8f8f;
+    }
+  }
+  .mat-form-field-suffix {
+    position: absolute;
+    right: 4px;
+    top: 0.65em !important;
+  }
+}
+.mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn {
+  // background: $primary-color-02;
+  span {
+    // color: $primary-color;
+    color: white;
+  }
+}
+.mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  background: #B6CAD3;
+  span {
+    color: white;
+  }
+}
+
+.mat-form-field-appearance-outline.mat-focused:not(.mat-form-field-invalid) {
+  .mat-form-field-outline-thick {
+    // background: rgba(map-get($map: $sso-primary-blue, $key: 50), 0.2);
+    color: $primary-color;
+  }
+}
+
+.mat-form-field-appearance-outline {
+  .mat-form-field-outline-thick {
+    // color: map-get($map: $sso-primary-blue, $key: 500);
+    color: $primary-color;
+  }
+}
+
+.mat-tab-label {
+  opacity: 1 !important;
+  .tab-list-item {
+    display: flex;
+    align-items: center;
+    color: $bi-accent-color;
+    &.tab-list-selected {
+      color: #3E4C5C !important;
+    }
+  }
+  .mat-tab-label-content {
+    display: flex;
+    align-items: center;
+    color: $bi-accent-color;
+    &.tab-list-selected {
+      color: #3E4C5C !important;
+    }
+  }
+  &.mat-tab-label-active {
+    .mat-tab-label-content {
+      color: #3E4C5C !important;
+    }
+  }
+}
+body {
+  .cp-form-field {
+    width: 100%;
+    .mat-input-element, .mat-select-trigger {
+      color: #3E4C5C;
+      // font-weight: bold;
+      line-height: 23px;
+    }
+    input.mat-input-element {
+      height: 23px;
+    }
+    .mat-select {
+      .mat-select-value {
+        color: #3E4C5C;
+      }
+    }
+    .mat-form-field-outline {
+      border-radius: 5px;
+    }
+  }
+  .cp-form-field.mat-form-field-disabled {
+    .mat-input-element {
+      // color: rgba(0, 0, 0, .38);
+    }
+    .mat-form-field-outline {
+      background: #EAEDEF;
+    }
+  }
+  .cp-form-label {
+    font-weight: bold;
+  }
+  .cp-radio-group {
+    mat-radio-button.mat-radio-button {
+      .mat-radio-container {
+        .mat-radio-outer-circle {
+          border-color: #B6CAD3;
+        }
+      }
+      .mat-radio-label-content {
+        font-size: 14px;
+        color: #717F86;
+        line-height: 16px;
+      }
+    }
+
+  }
+  // 去掉默认边框
+  .cp-form-field:not(.ng-invalid.ng-touched) {
+    .mat-form-field-wrapper {
+      .mat-form-field-outline-start, .mat-form-field-outline-end {
+        border: none;
+      }
+    }
+  }
+}
+
+
+// bite switch
+mat-slide-toggle.bi-slide-toggle {
+  .mat-slide-toggle-bar {
+      width: 60px;
+      height: 30px;
+      border-radius: 15px;
+  }
+  .mat-slide-toggle-thumb-container {
+    top: 3px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    .mat-slide-toggle-thumb {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+
+  &.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container {
+      transform: translate3d(29px, 0, 0)
+  }
+  &.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
+      background-color: white;
+  }
+}
+// bite 文本区域
+.bi-textarea-field {
+  width: 100%;
+
+  &.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: transparent;
+  }
+  &.mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 10px 20px;
+    min-height: 162px;
+  }
+  textarea {
+    line-height: 20px;
+    min-height: 140px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    .cp-form-field {
+      .mat-input-element, .mat-select-trigger {
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.bottomSheet {
+  max-height: 100vh !important;
+}

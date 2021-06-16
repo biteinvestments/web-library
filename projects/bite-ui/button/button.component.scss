@@ -1,0 +1,54 @@
+
+// @import '../../../src/styles/variables.scss';
+@import '../variables.scss';
+@keyframes spinning {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes spinning {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes spinning {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.loading-icon {
+    display: inline-block;
+    width: 16px;
+    text-align: center;
+    line-height: 16px;
+    height: 16px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 2px solid;
+        border-radius: 50%;
+        border-color: #fff #fff #fff transparent;
+        animation: spinning 1s linear infinite;
+    }
+}
+
+.loading-icon.dark {
+    &::before {
+        border-color: $bi-accent-color $bi-accent-color $bi-accent-color transparent;
+    }
+}
+
+.bi-large-button {
+    height: 50px;
+}

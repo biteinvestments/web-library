@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+@include mat-core();
+
+$bi-blue-theme: mat-light-theme(
+  (
+    color: (
+      primary: $bi-primary,
+      accent: $bi-accent,
+      warn: $bi-warn,
+    ),
+  )
+);
+
+@include angular-material-theme($bi-blue-theme);

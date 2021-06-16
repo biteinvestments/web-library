@@ -1,0 +1,132 @@
+@import '~@angular/material/theming';
+
+:root {
+  --primary-color: #4DB2EE;
+  --mobile-bg: linear-gradient(#4DB2EE, #fff);;
+  --primary-color-02: rgba('#4DB2EE', 0.2);
+}
+
+$primary-color: var(--primary-color);
+$mobile-bg: var(--mobile-bg);
+$primary-color-02: var(--primary-color-02);
+
+$bi-primary-blue: (
+  50: #e3f2fd,
+  100: #bbdefb,
+  200: #90caf9,
+  300: #64b5f6,
+  400: $primary-color, // #4DB2EE
+  500: $primary-color, // #259fd7
+  600: #1e88e5,
+  700: #1976d2,
+  800: #1565c0,
+  900: #0d47a1,
+  A100: #82b1ff,
+  A200: #448aff,
+  A400: #2979ff,
+  A700: #2962ff,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$bi-accent-grey: (
+  50: #F3F6F7,
+  100: #cfd8dc,
+  200: #B6CAD3,
+  300: #90a4ae,
+  400: #78909c,
+  350: #717F86,
+  500: #607d8b,
+  600: #546e7a,
+  700: #455a64,
+  800: #37474f,
+  900: #263238,
+  A100: #cfd8dc,
+  A200: #b0bec5,
+  A400: #78909c,
+  A700: #455a64,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+$bi-warn-red: (
+  50: #ffebee,
+  100: #ffcdd2,
+  200: #ef9a9a,
+  300: #D05F5F,
+  400: #E25858,
+  500: #f44336,
+  600: #e53935,
+  700: #d32f2f,
+  800: #c62828,
+  900: #b71c1c,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$bi-primary: mat-palette($bi-primary-blue, 400, 50, 700);
+$bi-accent: mat-palette($bi-accent-grey, 350, 100, A400);
+$bi-warn: mat-palette($bi-warn-red, 400, 100, A400);
+
+// 色调
+$bi-primary-color: map-get($map: $bi-primary-blue, $key: 400);
+$bi-accent-color: map-get($map: $bi-accent-grey, $key: 350);
+$bi-accent-color-light: map-get($map: $bi-accent-grey, $key: 50);
+$bi-accent-color-light-deep: map-get($map: $bi-accent-grey, $key: 200);
+$bi-warn-color: map-get($map: $bi-warn-red, $key: 400);
+$bi-dark-color: #201c2d;
+$bi-blue-dark-color: #3E4C5C;
+$bi-primary-500: map-get($map: $bi-primary-blue, $key: 500);
+$bi-warn-300: map-get($map: $bi-warn-red, $key: 300);
+
+$bi-border-radius: 4px;
+$bi-border-radius-large: 6px;
+$bi-line-color: #CDD8DD;
+$bi-line-color-light: #E7F0F4;
+
+$bi-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);

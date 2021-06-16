@@ -24,6 +24,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles/theme.scss",
+              "src/styles/material.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -88,6 +90,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles/theme.scss",
+              "src/styles/material.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -164,6 +168,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "web-library"
 }

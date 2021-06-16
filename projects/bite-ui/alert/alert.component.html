@@ -1,5 +1,8 @@
+<!-- This is an useless demo -->
 <div class="bite-alert {{ type }} " *ngIf="!hide">
-  <button type="button" class="bite-close" (click)="close()" *ngIf="closeable">X</button>
+  This is an useless demo
   <span class="bite-alert-icon icon-{{ type }}" *ngIf="showIcon"></span>
-  <ng-content></ng-content>
+  【<ng-content></ng-content>】
+
+  <button type="button" class="bite-close" (click)="close()" *ngIf="closeable">Close</button>
 </div>

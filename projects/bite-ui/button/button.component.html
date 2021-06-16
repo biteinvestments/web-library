@@ -1,0 +1,31 @@
+<ng-container [ngSwitch]="type">
+    <ng-container *ngSwitchCase="'flat'">
+        <button mat-flat-button [disabled]="_disabled" [color]="color" [class]="classname" (click)="handleClick($event)">
+            <span *ngTemplateOutlet="BUTTON_CONTENT"></span>
+        </button>
+    </ng-container>
+    <ng-container *ngSwitchCase="'stroked'">
+        <button mat-stroked-button [disabled]="_disabled" [color]="color" [class]="classname" (click)="handleClick($event)">
+            <span *ngTemplateOutlet="BUTTON_CONTENT"></span>
+        </button>
+    </ng-container>
+    <ng-container *ngSwitchCase="'raised'">
+        <button mat-raised-button [disabled]="_disabled" [color]="color" [class]="classname" (click)="handleClick($event)">
+            <span *ngTemplateOutlet="BUTTON_CONTENT"></span>
+        </button>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+        <button mat-button [disabled]="_disabled" [color]="color" [class]="classname" (click)="handleClick($event)">
+            <span *ngTemplateOutlet="BUTTON_CONTENT"></span>
+        </button>
+    </ng-container>
+</ng-container>
+
+<ng-template #BUTTON_CONTENT>
+    <ng-container *ngIf="loading; else CONTENT">
+        <span class="loading-icon" [class]="dark ? 'dark': ''"></span>
+    </ng-container>
+    <ng-template #CONTENT>
+        <ng-content></ng-content>
+    </ng-template>
+</ng-template>
