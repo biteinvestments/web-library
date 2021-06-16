@@ -1,0 +1,11 @@
+{
+  "main": "../bundles/bite-ui-button.umd.js",
+  "module": "../fesm2015/bite-ui-button.js",
+  "es2015": "../fesm2015/bite-ui-button.js",
+  "esm2015": "../esm2015/button/bite-ui-button.js",
+  "fesm2015": "../fesm2015/bite-ui-button.js",
+  "typings": "bite-ui-button.d.ts",
+  "metadata": "bite-ui-button.metadata.json",
+  "sideEffects": false,
+  "name": "bite-ui/button"
+}

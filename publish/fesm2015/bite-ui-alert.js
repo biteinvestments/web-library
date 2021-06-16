@@ -23,7 +23,7 @@ class AlertComponent {
 AlertComponent.decorators = [
     { type: Component, args: [{
                 selector: 'bite-alert',
-                template: "<div class=\"bite-alert {{ type }} \" *ngIf=\"!hide\">\n  <button type=\"button\" class=\"bite-close\" (click)=\"close()\" *ngIf=\"closeable\">X</button>\n  <span class=\"bite-alert-icon icon-{{ type }}\" *ngIf=\"showIcon\"></span>\n  <ng-content></ng-content>\n</div>\n",
+                template: "<!-- This is an useless demo -->\n<div class=\"bite-alert {{ type }} \" *ngIf=\"!hide\">\n  This is an useless demo\n  <span class=\"bite-alert-icon icon-{{ type }}\" *ngIf=\"showIcon\"></span>\n  \u3010<ng-content></ng-content>\u3011\n\n  <button type=\"button\" class=\"bite-close\" (click)=\"close()\" *ngIf=\"closeable\">Close</button>\n</div>\n",
                 styles: [".bite-alert{background-color:rgba(37,159,215,.08);padding:20px}"]
             },] }
 ];

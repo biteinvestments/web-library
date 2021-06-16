@@ -1,3 +1,4 @@
+import { ButtonModule } from 'bite-ui/button';
 import { AlertModule } from 'bite-ui/alert';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,8 @@ BiteUiModule.decorators = [
                     CommonModule,
                 ],
                 exports: [
-                    AlertModule
+                    AlertModule,
+                    ButtonModule
                 ],
                 providers: [],
             },] }

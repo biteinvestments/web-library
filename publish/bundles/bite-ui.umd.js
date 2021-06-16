@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('bite-ui/alert'), require('@angular/core'), require('@angular/common')) :
-    typeof define === 'function' && define.amd ? define('bite-ui', ['exports', 'bite-ui/alert', '@angular/core', '@angular/common'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['bite-ui'] = {}, global['bite-ui'].alert, global.ng.core, global.ng.common));
-}(this, (function (exports, alert, core, common) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('bite-ui/button'), require('bite-ui/alert'), require('@angular/core'), require('@angular/common')) :
+    typeof define === 'function' && define.amd ? define('bite-ui', ['exports', 'bite-ui/button', 'bite-ui/alert', '@angular/core', '@angular/common'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['bite-ui'] = {}, global['bite-ui'].button, global['bite-ui'].alert, global.ng.core, global.ng.common));
+}(this, (function (exports, button, alert, core, common) { 'use strict';
 
     // import { AlertModule } from 'bite-ui/alert';
     var BiteUiModule = /** @class */ (function () {
@@ -16,7 +16,8 @@
                         common.CommonModule,
                     ],
                     exports: [
-                        alert.AlertModule
+                        alert.AlertModule,
+                        button.ButtonModule
                     ],
                     providers: [],
                 },] }

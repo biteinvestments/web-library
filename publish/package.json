@@ -1,9 +1,10 @@
 {
   "name": "bite-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^10.2.4",
-    "@angular/core": "^10.2.4"
+    "@angular/core": "^10.2.4",
+    "@angular/material": "^10.2.7"
   },
   "dependencies": {
     "tslib": "^2.0.0"
