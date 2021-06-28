@@ -1,0 +1,11 @@
+{
+  "main": "../bundles/bite-ui-upload.umd.js",
+  "module": "../fesm2015/bite-ui-upload.js",
+  "es2015": "../fesm2015/bite-ui-upload.js",
+  "esm2015": "../esm2015/upload/bite-ui-upload.js",
+  "fesm2015": "../fesm2015/bite-ui-upload.js",
+  "typings": "bite-ui-upload.d.ts",
+  "metadata": "bite-ui-upload.metadata.json",
+  "sideEffects": false,
+  "name": "bite-ui/upload"
+}

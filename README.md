@@ -1,6 +1,5 @@
 <h1 align="center">BiteUi for Angular</h1>
 
-
 ## Angular版本
 
 当前支持的angular版本<font color=red>`^10.0.0`</font>
@@ -52,7 +51,7 @@ export class AppModule { }
 
 ```html
 <!-- demo -->
-   <bite-button type="flat" color="primary" [loading]="false">Btn</bite-button>
+<bite-button type="flat" color="primary" [loading]="false">Btn</bite-button>
     
 ```
 
@@ -74,7 +73,7 @@ export class AppModule { }
 
 ```html
 <!-- demo -->
-    <bite-upload></bite-upload>
+<bite-upload></bite-upload>
 ```
 
 ```typescript
