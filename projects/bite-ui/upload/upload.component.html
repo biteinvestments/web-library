@@ -1,0 +1,54 @@
+<div class="upload-container">
+  <div class="upload-title" *ngIf="title && !disabled">
+    {{ title }}
+  </div>
+
+  <div class="upload-icon-content" [class]="classname" (click)="chooseFile()">
+    <span class="upload-icon" *ngIf="fileList.length === 0 && !error">
+      <i class="iconfont icon-plus"></i>
+    </span>
+    <ng-container *ngFor="let file of fileList">
+      <div class="file-item">
+        <div class="file-icon" *ngIf="file.file?.format">
+          <img *ngIf="file.file?.format?.indexOf('image') > -1" src="../../common/assets/pic.png" alt="">
+          <img *ngIf="file.file?.format?.indexOf('pdf') > -1" src="../../common/assets/pdf.png" alt="">
+        </div>
+        <div class="file-icon" *ngIf="file.file?.type">
+          <img *ngIf="file.file?.type?.indexOf('image') > -1" src="../../common/assets/pic.png" alt="">
+          <img *ngIf="file.file?.type?.indexOf('pdf') > -1" src="../../common/assets/pdf.png" alt="">
+        </div>
+        <p class="file-name">
+          <a [href]="file?.previewUrl||file?.file?.previewUrl" target="_blank">{{ file?.file?.name }}</a>
+        </p>
+        <div *ngIf="!disabled" class="file-operation" (click)="reUpload(); $event.stopPropagation()">
+          <i class="iconfont icon-reset-arrow"></i>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="uploading">
+      <div *ngTemplateOutlet="MODAL"></div>
+    </ng-container>
+  </div>
+  <div class="accept-type-content" *ngIf="acceptTip && !disabled && !error">
+    {{ acceptTip | translate }}
+  </div>
+  <div class="accept-type-content error" *ngIf="error">
+    <div>{{ uploadResult.msg }}</div>
+    <a class="bi-primary-text reupload-link" (click)="reUpload(); $event.stopPropagation()">{{ 'inbox.button.reUpload' |
+      translate }}</a>
+  </div>
+  <input #INPUT_REF style="display: none;" type="file" [accept]="accept">
+</div>
+
+<ng-template #MODAL>
+  <div class="upload-modal">
+    <span *ngIf="showModalLoading" class="modal-icon loading-icon">
+    </span>
+    <span *ngIf="showModalSuccess" class="modal-icon modal-success-icon">
+      <i class="iconfont icon-duihao"></i>
+    </span>
+    <span *ngIf="error" class="modal-icon modal-error-icon" (click)="reUpload(); $event.stopPropagation()">
+      <i class="iconfont icon-reset-arrow"></i>
+    </span>
+  </div>
+</ng-template>

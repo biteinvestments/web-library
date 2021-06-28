@@ -1,6 +1,6 @@
+import { UploadModule } from 'bite-ui/upload';
 import { ButtonModule } from 'bite-ui/button';
 // import { BiteUiModule } from './../../projects/bite-ui/bite-ui.module';
-import { AlertModule } from 'bite-ui/alert';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,10 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    // BiteUiModule,
-    AlertModule,
     ButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    UploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]
