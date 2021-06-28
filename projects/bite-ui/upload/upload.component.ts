@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input, Output, EventEmitter, ElementRef, ViewChild, SimpleChanges } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -37,7 +38,7 @@ export class UploadComponent implements OnInit {
    * @param file 
    * @param container 
    */
-  @Input() uploadFileFn
+  @Input() uploadFileFn: any
 
   
 
@@ -73,6 +74,7 @@ export class UploadComponent implements OnInit {
   }
 
   constructor(
+    public http: HttpClient
   ) { }
 
   ngOnInit(): void {
@@ -112,7 +114,7 @@ export class UploadComponent implements OnInit {
       file,
       status: 'uncommit'
     });
-    this.uploadFileFn(file).subscribe(data => {
+    this.uploadFileFn(file, null, this.http).subscribe(data => {
       this.uploadResult = data;
       this.success = true;
       this.fileList[0].status = 'finished';

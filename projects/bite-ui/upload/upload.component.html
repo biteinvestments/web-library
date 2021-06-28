@@ -9,14 +9,14 @@
     </span>
     <ng-container *ngFor="let file of fileList">
       <div class="file-item">
-        <div class="file-icon" *ngIf="file.file?.format">
+        <!-- <div class="file-icon" *ngIf="file.file?.format">
           <img *ngIf="file.file?.format?.indexOf('image') > -1" src="../../common/assets/pic.png" alt="">
           <img *ngIf="file.file?.format?.indexOf('pdf') > -1" src="../../common/assets/pdf.png" alt="">
         </div>
         <div class="file-icon" *ngIf="file.file?.type">
           <img *ngIf="file.file?.type?.indexOf('image') > -1" src="../../common/assets/pic.png" alt="">
           <img *ngIf="file.file?.type?.indexOf('pdf') > -1" src="../../common/assets/pdf.png" alt="">
-        </div>
+        </div> -->
         <p class="file-name">
           <a [href]="file?.previewUrl||file?.file?.previewUrl" target="_blank">{{ file?.file?.name }}</a>
         </p>
@@ -30,12 +30,11 @@
     </ng-container>
   </div>
   <div class="accept-type-content" *ngIf="acceptTip && !disabled && !error">
-    {{ acceptTip | translate }}
+    {{ acceptTip }}
   </div>
   <div class="accept-type-content error" *ngIf="error">
     <div>{{ uploadResult.msg }}</div>
-    <a class="bi-primary-text reupload-link" (click)="reUpload(); $event.stopPropagation()">{{ 'inbox.button.reUpload' |
-      translate }}</a>
+    <a class="bi-primary-text reupload-link" (click)="reUpload(); $event.stopPropagation()">{{ 'Upload again'}}</a>
   </div>
   <input #INPUT_REF style="display: none;" type="file" [accept]="accept">
 </div>
