@@ -4,6 +4,17 @@
 
 当前支持的angular版本<font color=red>`^10.0.0`</font>
 
+## TODO List
+
+- [ ] bite.css
+- [x] button
+- [x] upload
+- [ ] drawer
+- [ ] dynamic form
+- [ ] pdf view
+- [ ] image view
+- [ ] smart select
+- [ ] ...
 ## 快速开始
 
 1. 创建一个项目
