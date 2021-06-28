@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { OnInit, EventEmitter, ElementRef, SimpleChanges } from '@angular/core';
 export declare class UploadComponent implements OnInit {
+    http: HttpClient;
     /**
      * @description 上传文件
      * @param file
@@ -25,7 +27,7 @@ export declare class UploadComponent implements OnInit {
     showModalSuccess: boolean;
     showModalLoading: boolean;
     get classname(): string;
-    constructor();
+    constructor(http: HttpClient);
     ngOnInit(): void;
     ngOnChanges(changes: SimpleChanges): void;
     ngAfterViewInit(): void;
